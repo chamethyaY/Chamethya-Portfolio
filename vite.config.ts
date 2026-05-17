@@ -27,6 +27,9 @@ export default defineConfig({
         },
       },
     ],
+    build: {
+      sourcemap: true,
+    },
   },
   tanstackStart: {
     server: { entry: "server" },

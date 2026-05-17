@@ -144,14 +144,14 @@ const projects = [
 const education = [
   {
     year: "2024 — 2028",
-    title: "B.Sc. in Computer Science",
-    place: "University of Technology",
+    title: "Informatics Institute OF Technology (IIT)",
+    place: "Bsc (Hons) Computer Science",
     desc: "Computer Science Undergraduate. Focus on software engineering and AI.",
   },
   {
     year: "2009 — 2022",
-    title: "Nursery — G.C.E. Advanced Level",
-    place: "Anula Vidyalaya, Nugegoda",
+    title: "Anula Vidyalaya, Nugegoda",
+    place: "Nursery — G.C.E. Advanced Level",
     desc: "Advanced Level: Physical Science Stream (Combined Mathematics, Physics, Chemistry)\nG.C.E. Ordinary Level: Successfully completed with 9 Distinction passes (9 A's)",
     achievements: [
       "National-level Sharp Shooter (100m Air Rifle) and Netball Player",
@@ -314,6 +314,15 @@ function Portfolio() {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-primary hover:text-primary transition-smooth"
               >
                 Get In Touch
+              </a>
+              {/* Download CV button - place a CV at /assets/Chamethya_CV.pdf or public/Chamethya_CV.pdf to make this work */}
+              <a
+                href="/Chamethya%20Yasodie.pdf"
+                download="Chamethya_Yasodie.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/10 hover:bg-secondary/20 hover:border-primary transition-smooth"
+                aria-label="Download CV"
+              >
+                Download CV
               </a>
             </div>
             <div className="flex items-center gap-5 mt-10">
