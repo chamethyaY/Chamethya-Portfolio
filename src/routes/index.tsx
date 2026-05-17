@@ -18,10 +18,16 @@ import {
   Phone,
   ArrowRight,
 } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import profileImg from "@/assets/chamethya.jpg";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
+
+const postmanCertificate = new URL("../../postman .jpg", import.meta.url).href;
+const javaOopCertificate = new URL("../../java OOP beginners.jpg", import.meta.url).href;
+const advancedJavaCertificate = new URL("../../advanced java.jpg", import.meta.url).href;
+const machineLearningCertificate = new URL("../../machine learning.jpg", import.meta.url).href;
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -39,87 +45,156 @@ export const Route = createFileRoute("/")({
 const competencies = [
   {
     icon: Code2,
-    title: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "Java", "C++", "SQL"],
+    title: "Languages & Web Essentials",
+    items: ["JavaScript", "TypeScript", "Java", "Python", "HTML5", "CSS3"],
   },
   {
     icon: Layers,
     title: "Frameworks",
-    items: ["React", "Next.js", "Node.js", "Express", "Django", "TailwindCSS"],
+    items: ["React.js", "Node.js", "Next.js"],
   },
   {
     icon: Database,
     title: "Databases",
-    items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase"],
+    items: ["PostgreSQL", "MongoDB", "MySQL", "Supabase"],
   },
   {
     icon: Wrench,
     title: "Tools",
-    items: ["VS Code", "Figma", "Postman", "Docker", "Jira", "Vercel"],
+    items: ["VS Code", "Figma", "Postman", "Docker", "Jira", "IntelliJ", "Apache NetBeans"],
   },
-  { icon: GitBranch, title: "Version Control", items: ["Git", "GitHub", "GitLab", "Bitbucket"] },
+  { icon: GitBranch, title: "Version Control", items: ["Git", "GitHub"] },
   {
     icon: Users,
     title: "Soft Skills",
-    items: ["Problem Solving", "Teamwork", "Communication", "Adaptability", "Leadership"],
+    items: [
+      "Strong Communication Skills(English ,Sinhala)",
+      "Problem Solving",
+      "Teamwork",
+      "Adaptability",
+      "Leadership",
+      "Time Management",
+    ],
   },
 ];
 
 const projects = [
   {
     img: project1,
-    title: "Analytics Dashboard",
-    desc: "Real-time SaaS analytics platform with custom charts and role-based access.",
-    tags: ["React", "Node", "PostgreSQL"],
+    title: "Safety On Speed",
+    desc: "A cross-platform mobile safety app featuring a one-tap SOS system, automated guardian calls, and real-time GPS tracking.",
+    tags: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Twilio API",
+      "Google Maps API",
+    ],
     link: "#",
   },
   {
     img: project2,
-    title: "ShopWave Mobile",
-    desc: "Cross-platform e-commerce app with Stripe checkout and live order tracking.",
-    tags: ["React Native", "Stripe", "Firebase"],
+    title: "CareerForge",
+    desc: "An AI-powered career operating system cross-platform mobile app that transforms student developers into internship-ready candidates through real-time readiness scores, personalized learning roadmaps, and an AI mentor.",
+    tags: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Gemini AI",
+      "Edge Functions",
+    ],
     link: "#",
   },
   {
     img: project3,
-    title: "AI Chat Assistant",
-    desc: "Conversational AI tool powered by LLMs for productivity workflows.",
-    tags: ["Next.js", "OpenAI", "Vector DB"],
+    title: "Nexus-Employee-Portal",
+    desc: "A full-stack management web application utilizing OOP principles to manage employee data with efficient CRUD operations.",
+    tags: ["Java", "Spring Boot", "Thymeleaf", "Spring Data JPA", "JavaScript"],
+    link: "#",
+  },
+  {
+    img: project1,
+    title: "360 - Wellness Website",
+    desc: "A fully responsive, multi-page wellness website featuring dynamic DOM manipulations and interactive client-side forms.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Flexbox", "Grid"],
+    link: "#",
+  },
+  {
+    img: project2,
+    title: "Smart Campus API",
+    desc: "A fully RESTful, HATEOAS-compliant JAX-RS backend engine built with Jersey and Grizzly, orchestrating real-time campus sensor feeds and room configurations using thread-safe in-memory architectures.",
+    tags: ["Java 17", "JAX-RS", "Jersey", "Grizzly Server", "REST API", "Maven"],
+    link: "https://github.com/chamethyaY/smart-campus-api",
+  },
+
+  {
+    img: project3,
+    title: "Graph Acyclicity Validator",
+    desc: "A high-performance algorithmic tool that detects cycles in directed graphs using the Sink Elimination Algorithm.",
+    tags: ["Java", "Algorithms", "Data Structures"],
     link: "#",
   },
 ];
 
 const education = [
   {
-    year: "2020 — 2024",
+    year: "2024 — 2028",
     title: "B.Sc. in Computer Science",
     place: "University of Technology",
-    desc: "Graduated with First Class Honours. Focus on software engineering and AI.",
+    desc: "Computer Science Undergraduate. Focus on software engineering and AI.",
   },
   {
-    year: "2018 — 2020",
-    title: "High School Diploma",
-    place: "Greenwood High",
-    desc: "Science stream — Mathematics, Physics, Computer Science.",
+    year: "2009 — 2022",
+    title: "Nursery — G.C.E. Advanced Level",
+    place: "Anula Vidyalaya, Nugegoda",
+    desc: "Advanced Level: Physical Science Stream (Combined Mathematics, Physics, Chemistry)\nG.C.E. Ordinary Level: Successfully completed with 9 Distinction passes (9 A's)",
+    achievements: [
+      "National-level Sharp Shooter (100m Air Rifle) and Netball Player",
+      "Vice Games Captain (2021-2022)",
+      "Senior Prefect of Anula Vidyalaya (2018-2019)",
+    ],
   },
 ];
 
 const certifications = [
-  "AWS Certified Cloud Practitioner",
-  "Meta Front-End Developer Professional",
-  "Google Data Analytics Certificate",
-  "MongoDB Developer Associate",
+  {
+    title: "Machine Learning by Informatics Institute Of Technology",
+    image: machineLearningCertificate,
+  },
+  {
+    title: "API Beginner Learning Path offered by Postman Academy",
+    image: postmanCertificate,
+  },
+  {
+    title: "Advanced Java OOP Programmin by simplilearn",
+    image: advancedJavaCertificate,
+  },
+  {
+    title: "Java Fundamentals by simplilearn",
+    image: javaOopCertificate,
+  },
 ];
+
+// Replace with your Formspree endpoint: https://formspree.io/f/your-id
+const FORM_ENDPOINT = "https://formspree.io/f/xzdwpjjw";
 
 function Portfolio() {
   const [form, setForm] = useState({ name: "", contact: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
   const [portrait, setPortrait] = useState<string>(profileImg);
+  const [credentialsOpen, setCredentialsOpen] = useState(false);
+  const [selectedCredential, setSelectedCredential] = useState<
+    (typeof certifications)[number] | null
+  >(null);
 
   useEffect(() => {
     // Probe for a user-provided image at runtime without using dynamic import.
     // Check both .jpeg and .jpg variants and use the first that loads.
-    const candidates = ['/src/assets/chamethya.jpeg', '/src/assets/chamethya.jpg'];
+    const candidates = ["/src/assets/chamethya.jpeg", "/src/assets/chamethya.jpg"];
     let found = false;
     for (const c of candidates) {
       // eslint-disable-next-line no-loop-func
@@ -137,11 +212,27 @@ function Portfolio() {
     }
   }, []);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setForm({ name: "", contact: "", subject: "", message: "" });
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({ name: form.name, contact: form.contact, subject: form.subject, message: form.message }),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: "", contact: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        console.error("Form submit failed", res.status);
+        alert("Failed to send message. Please try again or contact me directly at k.chamethya@gmail.com");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error while sending message. Please try again later.");
+    }
   };
 
   return (
@@ -279,19 +370,42 @@ function Portfolio() {
             </div>
           </div>
           <div>
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-6">
-              <Award className="text-primary" /> Certifications
-            </h3>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="flex items-center gap-2 text-xl font-semibold">
+                <Award className="text-primary" /> Certifications
+              </h3>
+              <button
+                onClick={() => {
+                  setSelectedCredential(null);
+                  setCredentialsOpen(true);
+                }}
+                className="w-10 h-10 rounded-full bg-primary/10 border border-primary/30 hover:bg-primary/20 hover:border-primary/60 flex items-center justify-center transition-smooth"
+                title="View Credentials"
+              >
+                <Award className="w-5 h-5 text-primary" />
+              </button>
+            </div>
             <div className="space-y-3">
               {certifications.map((c) => (
                 <div
-                  key={c}
-                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl hover:border-primary/60 transition-smooth"
+                  key={c.title}
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 bg-card border border-border rounded-xl hover:border-primary/60 transition-smooth"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-primary" />
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="font-medium">{c.title}</div>
                   </div>
-                  <div className="font-medium">{c}</div>
+                  <button
+                    onClick={() => {
+                      setSelectedCredential(c);
+                      setCredentialsOpen(true);
+                    }}
+                    className="inline-flex items-center justify-center gap-2 self-start rounded-lg border border-primary/30 px-4 py-2 text-sm font-medium text-primary hover:border-primary hover:bg-primary/10 transition-smooth"
+                  >
+                    Credentials <ExternalLink className="w-4 h-4" />
+                  </button>
                 </div>
               ))}
             </div>
@@ -353,14 +467,17 @@ function Portfolio() {
               through the form or any of the channels below.
             </p>
             <div className="space-y-4">
-              <ContactRow icon={Mail} label="Email" value="alex.carter@example.com" />
-              <ContactRow icon={Phone} label="Phone" value="+1 (555) 123-4567" />
-              <ContactRow icon={MapPin} label="Location" value="San Francisco, CA" />
+              <ContactRow icon={Mail} label="Email" value="k.chamethya@gmail.com" />
+              <ContactRow icon={Phone} label="Phone" value="0784537626" />
+              <ContactRow icon={MapPin} label="Location" value="Nugegoda, Colombo" />
             </div>
             <div className="flex gap-4 pt-2">
-              <SocialIcon href="mailto:alex@example.com" icon={Mail} />
-              <SocialIcon href="https://github.com" icon={Github} />
-              <SocialIcon href="https://linkedin.com" icon={Linkedin} />
+              <SocialIcon href="mailto:k.chamethya@gmail.com" icon={Mail} />
+              <SocialIcon href="https://github.com/chamethyaY" icon={Github} />
+              <SocialIcon
+                href="https://www.linkedin.com/in/chamethya-yasodie-a8278a349/"
+                icon={Linkedin}
+              />
             </div>
           </div>
 
@@ -423,19 +540,65 @@ function Portfolio() {
       <footer className="border-t border-border mt-10">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div>© {new Date().getFullYear()} Chamethya Yasodie. Crafted with passion.</div>
-          <div className="flex gap-4">
-            <a href="mailto:alex@example.com" className="hover:text-primary transition-smooth">
+            <div className="flex gap-4">
+            <a href="mailto:k.chamethya@gmail.com" className="hover:text-primary transition-smooth">
               <Mail className="w-4 h-4" />
             </a>
-            <a href="https://github.com" className="hover:text-primary transition-smooth">
+            <a
+              href="https://github.com/chamethyaY"
+              className="hover:text-primary transition-smooth"
+            >
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://linkedin.com" className="hover:text-primary transition-smooth">
+            <a
+              href="https://www.linkedin.com/in/chamethya-yasodie-a8278a349/"
+              className="hover:text-primary transition-smooth"
+            >
               <Linkedin className="w-4 h-4" />
             </a>
           </div>
         </div>
       </footer>
+
+      {/* CREDENTIALS MODAL */}
+      <Dialog open={credentialsOpen} onOpenChange={setCredentialsOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Award className="text-primary" />
+              {selectedCredential?.title ?? "Credentials"}
+            </DialogTitle>
+          </DialogHeader>
+          {selectedCredential?.image ? (
+            <div className="space-y-4">
+              <div className="rounded-xl border border-border bg-card p-3">
+                <img
+                  src={selectedCredential.image}
+                  alt={selectedCredential.title}
+                  className="w-full max-h-[70vh] object-contain rounded-lg"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground">{selectedCredential.title}</p>
+            </div>
+          ) : (
+            <div className="space-y-3 max-h-96 overflow-y-auto">
+              {certifications.map((c, index) => (
+                <div
+                  key={index}
+                  className="p-4 bg-card border border-border rounded-lg hover:border-primary/60 transition-smooth"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                      <Award className="w-5 h-5 text-primary" />
+                    </div>
+                    <p className="text-sm font-medium leading-relaxed">{c.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
