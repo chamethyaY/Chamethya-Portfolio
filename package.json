@@ -1,6 +1,7 @@
 {
   "name": "tanstack_start_ts",
   "private": true,
+  "homepage": "https://chamethyay.github.io/Chamethya-Portfolio",
   "sideEffects": false,
   "type": "module",
   "scripts": {
