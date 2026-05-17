@@ -28,6 +28,7 @@ const postmanCertificate = new URL("../../postman .jpg", import.meta.url).href;
 const javaOopCertificate = new URL("../../java OOP beginners.jpg", import.meta.url).href;
 const advancedJavaCertificate = new URL("../../advanced java.jpg", import.meta.url).href;
 const machineLearningCertificate = new URL("../../machine learning.jpg", import.meta.url).href;
+const britishCouncilCertificate = new URL("../../British Council.jpg", import.meta.url).href;
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -158,6 +159,12 @@ const education = [
       "Senior Prefect of Anula Vidyalaya (2018-2019)",
     ],
   },
+  {
+    year: "2017 — 2018",
+    title: "Young Learner English Language Course",
+    place: "British Council",
+    desc: "Completed the Young Learner English language course focused on advanced English skills.",
+  },
 ];
 
 const certifications = [
@@ -176,6 +183,10 @@ const certifications = [
   {
     title: "Java Fundamentals by simplilearn",
     image: javaOopCertificate,
+  },
+  {
+    title: "British Council — English Course",
+    image: britishCouncilCertificate,
   },
 ];
 
@@ -217,8 +228,13 @@ function Portfolio() {
     try {
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: { "Accept": "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, contact: form.contact, subject: form.subject, message: form.message }),
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          contact: form.contact,
+          subject: form.subject,
+          message: form.message,
+        }),
       });
 
       if (res.ok) {
@@ -227,7 +243,9 @@ function Portfolio() {
         setTimeout(() => setSent(false), 3000);
       } else {
         console.error("Form submit failed", res.status);
-        alert("Failed to send message. Please try again or contact me directly at k.chamethya@gmail.com");
+        alert(
+          "Failed to send message. Please try again or contact me directly at k.chamethya@gmail.com",
+        );
       }
     } catch (err) {
       console.error(err);
@@ -364,7 +382,26 @@ function Portfolio() {
                   <div className="text-xs text-primary uppercase tracking-widest">{e.year}</div>
                   <div className="font-semibold mt-1">{e.title}</div>
                   <div className="text-sm text-muted-foreground">{e.place}</div>
-                  <p className="text-sm text-muted-foreground mt-2">{e.desc}</p>
+                  {e.desc && (
+                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                      {e.desc.split("\n").map((line, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {e.achievements && (
+                    <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                      {e.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
@@ -540,7 +577,7 @@ function Portfolio() {
       <footer className="border-t border-border mt-10">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div>© {new Date().getFullYear()} Chamethya Yasodie. Crafted with passion.</div>
-            <div className="flex gap-4">
+          <div className="flex gap-4">
             <a href="mailto:k.chamethya@gmail.com" className="hover:text-primary transition-smooth">
               <Mail className="w-4 h-4" />
             </a>
