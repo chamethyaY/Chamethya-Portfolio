@@ -2,7 +2,7 @@ name: Deploy Portfolio
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -13,17 +13,17 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          
+
       - name: Install & Build
         run: |
           npm install
           npm run build
-          
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
