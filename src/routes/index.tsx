@@ -161,8 +161,8 @@ const education = [
   },
   {
     year: "2017 — 2018",
-    title: "Young Learner English Language Course",
-    place: "British Council",
+    title: "British Council",
+    place: "Young Learner English Language Course",
     desc: "Completed the Young Learner English language course focused on advanced English skills.",
   },
 ];
