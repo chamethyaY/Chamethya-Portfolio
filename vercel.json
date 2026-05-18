@@ -1,5 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
-  "framework": "vite"
+  "framework": "vite",
+  "build": {
+    "env": {
+      "TSS_PRERENDERING": "false",
+      "CI": "true"
+    }
+  }
 }
