@@ -137,7 +137,7 @@ const projects = [
     title: "Graph Acyclicity Validator",
     desc: "A high-performance algorithmic tool that detects cycles in directed graphs using the Sink Elimination Algorithm.",
     tags: ["Java", "Algorithms", "Data Structures"],
-    link: "#",
+    link: "https://github.com/chamethyaY/CyclicityChecker",
   },
 ];
 
