@@ -115,7 +115,7 @@ const projects = [
     title: "Nexus-Employee-Portal",
     desc: "A full-stack management web application utilizing OOP principles to manage employee data with efficient CRUD operations.",
     tags: ["Java", "Spring Boot", "Thymeleaf", "Spring Data JPA", "JavaScript"],
-    link: "#",
+    link: "https://github.com/chamethyaY/Nexus-Employee-Portal",
   },
   {
     img: project1,
