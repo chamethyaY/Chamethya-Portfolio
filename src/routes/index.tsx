@@ -108,7 +108,7 @@ const projects = [
       "Gemini AI",
       "Edge Functions",
     ],
-    link: "#",
+    link: "https://github.com/chamethyaY/CareerForge",
   },
   {
     img: project3,
