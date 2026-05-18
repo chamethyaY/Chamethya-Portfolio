@@ -317,7 +317,7 @@ function Portfolio() {
               </a>
               {/* Download CV button - place a CV at /assets/Chamethya_CV.pdf or public/Chamethya_CV.pdf to make this work */}
               <a
-                href="/Chamethya%20Yasodie.pdf"
+                href="./Chamethya%20Yasodie.pdf"
                 download="Chamethya_Yasodie.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-secondary/10 hover:bg-secondary/20 hover:border-primary transition-smooth"
                 aria-label="Download CV"
