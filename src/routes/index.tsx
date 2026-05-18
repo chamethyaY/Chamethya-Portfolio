@@ -93,7 +93,7 @@ const projects = [
       "Twilio API",
       "Google Maps API",
     ],
-    link: "#",
+    link: "https://github.com/chamethyaY/Safety-on-Speed",
   },
   {
     img: project2,
