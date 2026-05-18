@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing my journey as a Computer Science undergraduate — including my projects, skills, education, and contact information.
 
- **Live Site:** [chamethyay.github.io/Chamethya-Portfolio](https://chamethyay.github.io/Chamethya-Portfolio/)
+🌐 **Live Site:** [chamethyay.github.io/Chamethya-Portfolio](https://chamethyay.github.io/Chamethya-Portfolio/)
 
 ---
 
@@ -111,10 +111,10 @@ npm run dev
 
 ## Contact
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-chamethya--yasodie-blue?logo=linkedin)](https://www.linkedin.com/in/chamethya-yasodie-a8278a349/)
-[![GitHub](https://img.shields.io/badge/GitHub-chamethyaY-black?logo=github)](https://github.com/chamethyaY)
-[![Portfolio](https://img.shields.io/badge/Portfolio-chamethyay.github.io-green?logo=googlechrome)](https://chamethyay.github.io/Chamethya-Portfolio/)
+- **LinkedIn:** [linkedin.com/in/chamethya-yasodie-a8278a349](https://www.linkedin.com/in/chamethya-yasodie-a8278a349/)
+- **GitHub:** [github.com/chamethyaY](https://github.com/chamethyaY)
+- **Portfolio:** [chamethyay.github.io/Chamethya-Portfolio](https://chamethyay.github.io/Chamethya-Portfolio/)
 
 ---
 
-> Built  by Chamethya Yasodie
+> Built with ❤️ by Chamethya Yasodie
