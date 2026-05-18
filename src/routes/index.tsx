@@ -122,7 +122,7 @@ const projects = [
     title: "360 - Wellness Website",
     desc: "A fully responsive, multi-page wellness website featuring dynamic DOM manipulations and interactive client-side forms.",
     tags: ["HTML5", "CSS3", "JavaScript", "Flexbox", "Grid"],
-    link: "https://github.com/chamethyaY/360wellness-website",
+    link: "https://github.com/chamethyaY/CyclicityChecker",
   },
   {
     img: project2,
